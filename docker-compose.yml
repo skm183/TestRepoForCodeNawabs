@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - JWT_SECRET=super-secret-key-change-in-production
+      - NODE_ENV=production
+    # For development, you might want to mount the source code
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
